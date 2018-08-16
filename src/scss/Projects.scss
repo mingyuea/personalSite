@@ -1,0 +1,112 @@
+@import 'componentShared';
+
+$menuWidth: 20%;
+$remWidth: 100% - $menuWidth;
+$introHt: 15%;
+$menuTop: $titleHt + $introHt;
+$menuHt: 100% - $menuTop;
+$bodyTop: $titleHt + $introHt; 
+$bodyHt: 100% - $bodyTop;
+
+$linkColor: rgba(0, 23, 96, 1);
+
+.mainCont{
+	@extend %compDimensions
+}
+
+%contShared{
+	position: absolute;
+	display: block;
+}
+
+.titleCont{
+	@extend %titleShared
+}
+
+.menuCont{
+	@extend %contShared;
+
+	height: $menuHt;
+	width: $menuWidth;
+	left:0;
+	top:$menuTop;
+	background-color: $menuBlue;
+	overflow-y: auto;
+}
+
+.menuTile, .menuTileSel{
+	width: 100%;
+	left: 0;	
+	font-size: 2.25vmin;
+	padding: 15px;
+	display: block;	
+}
+
+.menuTile{
+	color: white;
+	font-family: Helvetica;
+}
+
+.menuTileSel{
+	color: $menuHoverWht;
+	background-color: $menuHoverBlue;
+}
+
+.menuTile:hover, .menuTileSel:hover {
+	color: $menuHoverWht;
+	background-color: $menuHoverBlue;
+	cursor: pointer; 
+}
+
+.menuTile:hover{
+	border: 1px solid $menuBlue;
+}
+
+.introCont{
+	@extend %contShared;
+
+	width: 100%;
+	left: 0;
+	height: $introHt;
+	top: $titleHt;
+	padding: 0px 10px 5px 10px;
+	font-size: 2vmin;
+
+	background-color: black;
+	color: white;
+}
+
+.bodyCont{
+	@extend %contShared;
+
+	width: $remWidth;
+	left: $menuWidth;
+	top: $bodyTop;
+	height: $bodyHt;
+	color: white;
+	background-color: $menuHoverBlue;
+	padding: 15px;
+	font-size: 2.5vmin;
+}
+
+.divider{
+	display: block;
+	height: 2px;
+	background-color: white;
+	left: 2%;
+	width: 96%;
+	margin-bottom: 3%;
+}
+
+.projTitle{
+	margin: 2% 0% 3% 5%;
+	font-size: 3.5vmin;
+}
+
+.link{
+	color: Black; 
+}
+
+.link:hover{
+	color: $linkColor;
+}

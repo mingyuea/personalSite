@@ -1,0 +1,9 @@
+@import 'componentShared';
+
+.mainCont{
+	@extend %compDimensions;
+}
+
+.titleCont{
+	@extend %titleShared;
+}

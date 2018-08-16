@@ -1,0 +1,76 @@
+@import 'componentShared';
+
+$btnContHt: 80%;
+$btnContTop: 20%;
+$tileBG: rgba(1, 19, 40, 1);
+$hoverColor: rgba(186, 191, 196, 1);
+$hoverBG: rgba(9, 70, 132, 1);
+
+%btnShared{
+	display: block;
+	color: white;
+	font-family: Helvetica;
+}
+
+.mainCont{
+	@extend %compDimensions;
+	background-color: $lighterBG;
+	z-index: 100;
+	overflow-x: hidden;
+}
+
+.btnCont{
+	position: absolute;
+	width: 100%;
+	height: $btnContHt;
+	top: $btnContTop;
+	left: 0;
+}
+
+.sideBarCont{
+	position: absolute;
+	height: 100%;
+	width: 140px;
+	top: 0;
+	background-color: $tileBG;
+}
+
+.closeBtn{
+	@extend %btnShared;
+	font-size: 1.5em;
+	position: absolute;
+	padding: 10px;
+	left: 70%;
+	top: 5%;
+}
+
+.tile{
+	@extend %btnShared;
+	width: 100%;
+	left: 0;	
+	font-size: 1.2em;
+	padding: 10px;
+}
+
+.tileSel{
+	display: block;
+	color: $hoverColor;
+	background-color: $hoverBG;
+	cursor: pointer;
+	width: 100%;
+	left: 0;	
+	font-size: 1.2em;
+	padding: 10px;
+}
+
+.tileSel:hover{
+	cursor: pointer;
+}
+
+.tile:hover, .closeBtn:hover {
+	color: $hoverColor;
+	background-color: $hoverBG;
+	cursor: pointer;
+	border-top: 1px solid $tileBG;
+	border-bottom: 1px solid $tileBG;
+}

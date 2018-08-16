@@ -1,0 +1,29 @@
+$transparentBG: rgba(5, 7, 10, 0.7);
+$lighterBG: rgba(104, 106, 109, 0.6);
+$darkerBG: rgba(5, 7, 10, 1);
+
+$menuBlue: rgba(1, 19, 40, 1);
+$menuHoverBlue: rgba(9, 70, 132, 1);
+$menuHoverWht: rgba(186, 191, 196, 1);
+
+$titleHt: 13%;
+
+%compDimensions, %titleShared {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+%titleShared{
+	width: 100%;
+	height: $titleHt;
+	top:0;
+	left: 0;
+	padding: 3% 0% 2% 25%;
+	background-color: black;
+	color: white;
+}
