@@ -20,7 +20,7 @@ class Sidebar extends React.Component {
 
 	render(){
 		let rightDim = {right: this.props.style};
-		let txtArr = ["Home", "AboutMe", "Projects"];
+		let txtArr = ["Home", "About Me", "Projects"];
 
 		let rendArr = txtArr.map((text) => {
 			if(this.props.selected == text){
@@ -37,8 +37,8 @@ class Sidebar extends React.Component {
 				<div className={Style.closeBtn} onClick={this.handleClose}> X </div>
 				<div className={Style.btnCont}>
 					{rendArr}
-					<div className={Style.tile}> <a href="https://github.com/mingyuea">GitHub </a></div>
-					<div className={Style.tile}> Resume </div>
+					<div className={Style.tile}> <a className={Style.link} href="https://github.com/mingyuea">GitHub </a></div>
+					<div className={Style.tile} onClick={this.props.showResume}> Resume </div>
 					<div className={Style.tile} onClick={this.props.handleContact}>Contact Me</div>
 				</div>
 

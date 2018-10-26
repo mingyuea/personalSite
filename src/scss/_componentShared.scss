@@ -10,6 +10,16 @@ $titleHt: 13%;
 
 %compDimensions, %titleShared {
 	height: 100%;
+	width: 80%;
+	position: absolute;
+	top: 0;
+	left: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+%landingComp{
+	height: 100%;
 	width: 100%;
 	position: absolute;
 	top: 0;

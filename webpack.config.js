@@ -12,7 +12,16 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=1000000' },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=1000000'
+      },
+      {
+        test: /\.pdf$/,
+        use: {
+          loader: "file-loader"
+        }
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,

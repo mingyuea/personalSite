@@ -1,4 +1,6 @@
 @import 'componentShared';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 
 $menuWidth: 20%;
 $remWidth: 100% - $menuWidth;
@@ -8,10 +10,12 @@ $menuHt: 100% - $menuTop;
 $bodyTop: $titleHt + $introHt; 
 $bodyHt: 100% - $bodyTop;
 
+
 $linkColor: rgba(0, 23, 96, 1);
+$menuBG: rgba(174, 181, 193, 1);
 
 .mainCont{
-	@extend %compDimensions
+	@extend %compDimensions;
 }
 
 %contShared{
@@ -30,7 +34,7 @@ $linkColor: rgba(0, 23, 96, 1);
 	width: $menuWidth;
 	left:0;
 	top:$menuTop;
-	background-color: $menuBlue;
+	background-color: $menuBG;
 	overflow-y: auto;
 }
 
@@ -44,22 +48,21 @@ $linkColor: rgba(0, 23, 96, 1);
 
 .menuTile{
 	color: white;
-	font-family: Helvetica;
 }
 
 .menuTileSel{
-	color: $menuHoverWht;
-	background-color: $menuHoverBlue;
+	color: grey;
+	background-color: white;
 }
 
 .menuTile:hover, .menuTileSel:hover {
-	color: $menuHoverWht;
-	background-color: $menuHoverBlue;
+	color: rgba(120, 128, 140, 1);
+	background-color: white;
 	cursor: pointer; 
 }
 
 .menuTile:hover{
-	border: 1px solid $menuBlue;
+	border: 1px solid grey;
 }
 
 .introCont{
@@ -71,7 +74,6 @@ $linkColor: rgba(0, 23, 96, 1);
 	top: $titleHt;
 	padding: 0px 10px 5px 10px;
 	font-size: 2vmin;
-
 	background-color: black;
 	color: white;
 }
@@ -83,16 +85,17 @@ $linkColor: rgba(0, 23, 96, 1);
 	left: $menuWidth;
 	top: $bodyTop;
 	height: $bodyHt;
-	color: white;
-	background-color: $menuHoverBlue;
-	padding: 15px;
-	font-size: 2.5vmin;
+	color: black;
+	background-color: white;
+	padding: 20px;
+	font-size: 2.75vmin;
+	font-family: 'Open Sans', Trebuchet MS;
 }
 
 .divider{
 	display: block;
 	height: 2px;
-	background-color: white;
+	background-color: black;
 	left: 2%;
 	width: 96%;
 	margin-bottom: 3%;
@@ -104,7 +107,7 @@ $linkColor: rgba(0, 23, 96, 1);
 }
 
 .link{
-	color: Black; 
+	color: blue; 
 }
 
 .link:hover{

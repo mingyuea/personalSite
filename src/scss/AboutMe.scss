@@ -1,9 +1,49 @@
 @import 'componentShared';
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .mainCont{
 	@extend %compDimensions;
+	background-color: white;	
 }
 
 .titleCont{
 	@extend %titleShared;
+}
+
+.selfImg{
+	float: left;
+	margin: 5px 20px 10px 0px;
+	border-radius: 7px;
+	width: 36%;
+	height: 51%;
+	max-width: 288px;
+	max-height: 512px;
+}
+
+.textCont{
+	position: absolute;
+	top: $titleHt;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	padding: 25px 30px 20px 45px;
+	font-family: 'Montserrat', Trebuchet MS;
+}
+
+.textStart{
+	font-size: 4.75vmin;
+	display: inline;
+	margin-right: 10px;
+}
+
+.textBody{
+	font-size: 2.75vmin;
+	display: inline;
+}
+
+.close{
+	font-family: Serif;
+	font-size: 4vmin;
+	margin-top: 10px;
 }

@@ -15,6 +15,7 @@ class ContactCard extends React.Component {
 					<div className={Style.divider}></div>
 					<div className={Style.infoCont}>
 						<div>mingyuea@gmail.com</div>
+						<div className={Style.orDiv}>- or -</div>
 						<div>ming92@berkeley.edu</div>
 						<div>(510) 426-2889 </div>
 					</div>

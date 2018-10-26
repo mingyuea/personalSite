@@ -4,7 +4,11 @@ $navBG: rgba(5, 7, 10, 0.7);
 $navBtnHover: rgba(159, 164, 168, 0.7);
 
 .mainCont{
-	@extend %compDimensions
+	@extend %landingComp;
+
+	background-image: url('../resources/forest.jpg');
+	background-size: 100% 100%;
+	overflow-y: auto;
 }
 
 .navBtn{
@@ -13,7 +17,7 @@ $navBtnHover: rgba(159, 164, 168, 0.7);
 	height: 30px;
 	width: 37px;
 	top: 5%;
-	left: 90%;
+	left: 92%;
 	background-color: $transparentBG;
 	padding: 3px;
 	border-radius: 2px;
